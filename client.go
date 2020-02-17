@@ -20,7 +20,7 @@ func WithHTTPClient(hc *http.Client) Option {
 
 func WithLogger(logger *zap.SugaredLogger) Option {
 	return func(c *Client) error {
-		c.logger = logger.Named("ingest")
+		c.logger = logger
 		return nil
 	}
 }
