@@ -23,7 +23,7 @@ func ContextWithSession(ctx context.Context, session string) context.Context {
 	if session != "" {
 		return context.WithValue(ctx, ctxKey, session)
 	} else {
-		return ctx
+		return context.WithValue(ctx, ctxKey, nil)
 	}
 }
 
